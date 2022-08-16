@@ -8,72 +8,95 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
     </head>
     <body> 
-        <div class="container text-center">
+        <div class="container text">
         <div class="row">
             <div class="col">
                 <nav class="navbar bg-light">
                     <div class="container-fluid">
                          <a class="navbar-brand" href="#">
                             <img src="img/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
-                                 Bootstrap
+                            Sistema Web 2.0
                         </a>
                     </div>
                 </nav>
             </div>
         </div>
+
+
         <div class="row">
             <div class="col">
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                     <div class="container-fluid">
-                        <a class="navbar-brand" href="#">Sistema Web 2.0</a>
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                                     <span class="navbar-toggler-icon"></span>
                             </button>
                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Cadastrar</a>
+                                <a class="nav-link active" aria-current="page" href="index.php">Cadastro</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Consultar</a>
+                                <a class="nav-link" href="consulta.php">Consultar</a>
                             </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+                        </ul>
+                    </div>
+                </div>
+              </nav>
             </div>
         </div>
+
+        
         <div class="row">
             <div class="col">
+<nav class="navbar bg-light">
+    <div class="container-fluid">
+                <span class="navbar-brand">Cadastro de Usuário</span>
+            </div>
+</nav>
+</div>
+</div>
 
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Login:</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+       <div class="row">
+            <div class="col">&nbsp;</div>
+</div>
+
+<div class="row">
+            <div class="col">
+                <form class="row g-3">
+                    <div class="col-md-6">
+
+                    <label for="exampleFormControlInput1" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="inputEmail14">
                 </div>
 
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Endereço:</label>
+                <div class="col-md-6">
+                    <label for="exampleFormControlInput1" class="form-label">Senha</label>
+                        <input type="email" class="form-control" id="inputPassword4" >
+                </div>
+                <div class="col-12">
+                    <label for="exampleFormControlInput1" class="form-label">Endereço</label>
                         <input type="email" class="form-control" id="exampleFormControlInput1" >
                 </div>
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Bairro:</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" >
-                </div>
 
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Cep:</label>
+                <div class="col-6">
+                    <label for="exampleFormControlInput1" class="form-label">Bairro</label>
                         <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="00000-000">
                 </div>
 
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Cidade:</label>
+                <div class="col-6">
+                    <label for="exampleFormControlInput1" class="form-label">Cep</label>
                         <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
                 </div>
 
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Estado:</label>
+                <div class="col-md-6">
+                    <label for="exampleFormControlInput1" class="form-label">Cidade</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
+                </div>
+
+                <div class="col-md-4">
+                    <label for="exampleFormControlInput1" class="form-label">Estado</label>
                     <select class="form-select" aria-label="Default select example">
-  <option selected></option>
+  <option selected>Escolha...</option>
   <option value="AC">AC</option>
   <option value="AL">AL</option>
   <option value="AP">AP</option>
@@ -101,15 +124,18 @@
   <option value="TO">TO</option>
   <option value="DF">DF</option>
 </select>
+</div>
+<div class="col-12">
+<button type="submit" class="btn btn-dark">Cadastrar</button>
                 </div>
-                
-            <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Senha</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-            </div>
+
+</form>
 
         </div>
         </div>
+</div>
+
+
     </body>
 </html>
 
