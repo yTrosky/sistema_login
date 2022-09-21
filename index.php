@@ -1,19 +1,22 @@
 <html>
-    <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
-    </head>
-    <body> 
-        <div class="container text">
+
+<head>
+    <title>Sistema Web 2.0</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container text-center">
+        
         <div class="row">
             <div class="col">
                 <nav class="navbar bg-light">
                     <div class="container-fluid">
-                         <a class="navbar-brand" href="#">
+                        <a class="navbar-brand" href="#">
                             <img src="img/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
                             Sistema Web 2.0
                         </a>
@@ -21,8 +24,7 @@
                 </nav>
             </div>
         </div>
-
-
+        
         <div class="row">
             <div class="col">
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -45,97 +47,85 @@
             </div>
         </div>
 
-        
         <div class="row">
             <div class="col">
-<nav class="navbar bg-light">
-    <div class="container-fluid">
-                <span class="navbar-brand">Cadastro de Usuário</span>
+                <!-- As a heading -->
+                <nav class="navbar bg-light">
+                    <div class="container_fluid">
+                        <span class="navbar-brand">Cadastro de Usuário</span>
+                    </div>
+                </nav>
             </div>
-</nav>
-</div>
-</div>
+            <div class="row">
+                <div class="col">&nbsp;</div>
+            </div>
 
-       <div class="row">
-            <div class="col">&nbsp;</div>
-</div>
-
-<div class="row">
-            <div class="col">
-                <form class="row g-3">
-                    <div class="col-md-6">
-
-                    <label for="exampleFormControlInput1" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="inputEmail14">
+            <div class="row">
+                <div class="col">
+                    <form class="row g-3" method="post" action="controller/ControllerCadastro.php?funcao=cadastro" id="form" name="form">
+                        <div class="col-md-6">
+                            <label for="inputEmail4" class="form-label">Email</label>
+                            <input type="email" class="form-control" name="txtEmail" id="txtEmail">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPassword4" class="form-label">Senha</label>
+                            <input type="password" class="form-control" name="txtSenha" id="txtSenha">
+                        </div>
+                        <div class="col-12">
+                            <label for="inputAddress" class="form-label">Endereço</label>
+                            <input type="text" class="form-control" name="txtEndereco" id="txtEndereco">
+                        </div>
+                        <div class="col-6">
+                            <label for="inputAdress2" class="form-label">Bairro</label>
+                            <input type="text" class="form-control" name="txtBairro" id="txtBairro">
+                        </div>
+                        <div class="col-6">
+                            <label for="inputAddress2" class="form-label">Cep</label>
+                            <input type="text" class="form-control" name="txtCep" id="txtCep">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputCity" class="form-label">Cidade</label>
+                            <input type="text" class="form-control" name="txtCidade" id="txtCidade">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputState" class="form-label">Estado</label>
+                            <select id="txtEstado" name="txtEstado" class="form-select">
+                                <option selected>Escolha...</option>
+                                <option value="1">AC</option>
+                                <option value="2">AL</option>
+                                <option value="3">AP</option>
+                                <option value="4">AM</option>
+                                <option value="5">BA</option>
+                                <option value="6">CE</option>
+                                <option value="7">ES</option>
+                                <option value="8">GO</option>
+                                <option value="9">MA</option>
+                                <option value="10">MT</option>
+                                <option value="11">MS</option>
+                                <option value="12">MG</option>
+                                <option value="13">PA</option>
+                                <option value="14">PB</option>
+                                <option value="15">PR</option>
+                                <option value="16">PE</option>
+                                <option value="17">PI</option>
+                                <option value="18">RJ</option>
+                                <option value="19">RN</option>
+                                <option value="20">RS</option>
+                                <option value="21">RO</option>
+                                <option value="22">RR</option>
+                                <option value="23">SC</option>
+                                <option value="24">SP</option>
+                                <option value="25">SE</option>
+                                <option value="26">TO</option>
+                                <option value="27">DF</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-dark">Cadastrar</button>
+                        </div>
+                    </form>
                 </div>
-
-                <div class="col-md-6">
-                    <label for="exampleFormControlInput1" class="form-label">Senha</label>
-                        <input type="email" class="form-control" id="inputPassword4" >
-                </div>
-                <div class="col-12">
-                    <label for="exampleFormControlInput1" class="form-label">Endereço</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" >
-                </div>
-
-                <div class="col-6">
-                    <label for="exampleFormControlInput1" class="form-label">Bairro</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="00000-000">
-                </div>
-
-                <div class="col-6">
-                    <label for="exampleFormControlInput1" class="form-label">Cep</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
-                </div>
-
-                <div class="col-md-6">
-                    <label for="exampleFormControlInput1" class="form-label">Cidade</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
-                </div>
-
-                <div class="col-md-4">
-                    <label for="exampleFormControlInput1" class="form-label">Estado</label>
-                    <select class="form-select" aria-label="Default select example">
-  <option selected>Escolha...</option>
-  <option value="AC">AC</option>
-  <option value="AL">AL</option>
-  <option value="AP">AP</option>
-  <option value="AM">AM</option>
-  <option value="BA">BA</option>
-  <option value="CE">CE</option>
-  <option value="ES">ES</option>
-  <option value="GO">GO</option>
-  <option value="MA">MA</option>
-  <option value="MT">MT</option>
-  <option value="MS">MS</option>
-  <option value="MG">MG</option>
-  <option value="PA">PA</option>
-  <option value="PR">PR</option>
-  <option value="PE">PE</option>
-  <option value="PI">PI</option>
-  <option value="RJ">RJ</option>
-  <option value="RN">RN</option>
-  <option value="RS">RS</option>
-  <option value="RO">RO</option>
-  <option value="RR">RR</option>
-  <option value="SC">SC</option>
-  <option value="SP">SP</option>
-  <option value="SE">SE</option>
-  <option value="TO">TO</option>
-  <option value="DF">DF</option>
-</select>
-</div>
-<div class="col-12">
-<button type="submit" class="btn btn-dark">Cadastrar</button>
-                </div>
-
-</form>
-
+            </div>
         </div>
-        </div>
-</div>
-
-
-    </body>
+</body>
 </html>
-
