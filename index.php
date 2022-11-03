@@ -9,6 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <div class="container text-center">
         
@@ -24,42 +25,39 @@
                 </nav>
             </div>
         </div>
-        
         <div class="row">
             <div class="col">
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                     <div class="container-fluid">
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                                    <span class="navbar-toggler-icon"></span>
-                            </button>
-                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="index.php">Cadastro</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="consulta.php">Consultar</a>
-                            </li>
-                        </ul>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Cadastrar</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="consulta.php">Consultar</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-              </nav>
+                </nav>
             </div>
         </div>
-
         <div class="row">
             <div class="col">
                 <!-- As a heading -->
                 <nav class="navbar bg-light">
-                    <div class="container_fluid">
-                        <span class="navbar-brand">Cadastro de Usuário</span>
+                    <div id = "dale" class="container_fluid">
+                        <span class="navbar-brand">Cadastrar Usuário</span>
                     </div>
                 </nav>
             </div>
             <div class="row">
                 <div class="col">&nbsp;</div>
             </div>
-
             <div class="row">
                 <div class="col">
                     <form class="row g-3" method="post" action="controller/ControllerCadastro.php?funcao=cadastro" id="form" name="form">
@@ -128,4 +126,5 @@
             </div>
         </div>
 </body>
+
 </html>

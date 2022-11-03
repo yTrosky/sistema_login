@@ -1,6 +1,5 @@
 <?php
-require_once("../sistema_login/controller/ControllerCadastro.php");
-
+require_once("controller/ControllerCadastro.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,10 +37,10 @@ require_once("../sistema_login/controller/ControllerCadastro.php");
                         <div class="collapse navbar-collapse" id="navbarNav">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="index.php">Cadastro</a>
+                                    <a class="nav-link" href="index.php">Cadastrar</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="consulta.php">Consulta</a>
+                                    <a class="nav-link active" aria-current="page" href="consulta.php">Consultar</a>
                                 </li>
                             </ul>
                         </div>
@@ -54,7 +53,7 @@ require_once("../sistema_login/controller/ControllerCadastro.php");
                 <!-- As a heading -->
                 <nav class="navbar bg-light">
                     <div class="container-fluid">
-                        <span class="navbar-brand">Lista de Usuários</span>
+                        <span class="navbar-brand">Usuários</span>
                     </div>
                 </nav>
             </div>
@@ -82,23 +81,25 @@ require_once("../sistema_login/controller/ControllerCadastro.php");
                         <?php
                         $controller = new cadastroController();
                         $result = $controller->listar(0);
-                        //print_r($resultado);
                         for ($i = 0; $i < count($result); $i++) {
-                            ?>
-                                <tr>
-                                    <td scope="col"><?php echo $result[$i]['id']; ?></td>
-                                    <td scope="col"><?php echo $result[$i]['email']; ?></td>
-                                    <td scope="col"><?php echo $result[$i]['senha']; ?></td>
-                                    <td scope="col"><?php echo $result[$i]['endereco']; ?></td>
-                                    <td scope="col"><?php echo $result[$i]['bairro']; ?></td>
-                                    <td scope="col"><?php echo $result[$i]['cep']; ?></td>
-                                    <td scope="col"><?php echo $result[$i]['cidade']; ?></td>
-                                    <td scope="col"><?php echo $result[$i]['estado']; ?></td>
-                                    <td scope="col">
-                                        <button type="button" class="btn btn-dark" onclick="location.href='editarClientes.php?id=<?php echo $result[$i]['id']; ?>'">Editar</button>
-                                        <button type="button" class="btn btn-dark">Excluir</button>
-                                    </td>
-                                </tr>
+                        ?>
+                            <tr>
+                                <td scope="col"><?php echo $result[$i]['id']; ?></td>
+                                <td scope="col"><?php echo $result[$i]['email']; ?></td>
+                                <td scope="col"><?php echo $result[$i]['senha']; ?></td>
+                                <td scope="col"><?php echo $result[$i]['endereco']; ?></td>
+                                <td scope="col"><?php echo $result[$i]['bairro']; ?></td>
+                                <td scope="col"><?php echo $result[$i]['cep']; ?></td>
+                                <td scope="col"><?php echo $result[$i]['cidade']; ?></td>
+                                <td scope="col"><?php echo $result[$i]['estado']; ?></td>
+                                <td scope="col">
+                                    <button type="button" class="btn btn-dark" onclick="location.href='EditarCliente.php?id=<?php echo $result[$i]['id']; ?>'" >Editar</button>
+                                    <button type="button" class="btn btn-dark" onclick="var result = confirm('Tem certeza que quer excluir o registro?');
+                                        if (result == true) {
+                                            location.href='excluir.php?id=<?php echo $result[$i]['id']; ?>'
+                                        }">Excluir</button>
+                                </td>
+                            </tr>
                         <?php
                         }
                         ?>
