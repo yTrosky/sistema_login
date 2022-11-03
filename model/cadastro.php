@@ -3,6 +3,7 @@ require_once("banco.php");
 
 class Cadastro extends Banco {
 
+    private $id;
     private $email;
     private $senha;
     private $endereco;
@@ -12,6 +13,9 @@ class Cadastro extends Banco {
     private $estado;
 
     //Metodos Set
+    public function setId($string){
+        $this->id = $string;
+    }
     public function setEmail($string){
         $this->email = $string;
     }
@@ -34,7 +38,10 @@ class Cadastro extends Banco {
         $this->estado = $string;
     }
 
-    //Metodos Get
+    //Metodos Get 
+    public function getId(){
+        return $this->id;
+    }
     public function getEmail(){
         return $this->email;
     }
@@ -61,8 +68,12 @@ class Cadastro extends Banco {
         return $this->setCadastro($this->getEmail(),$this->getSenha(),$this->getEndereco(),$this->getBairro(),$this->getCep(),$this->getCidade(),$this->getEstado());
     }
 
-    public function listar(){
-        return $this->getCadastro();
+    public function listar($id){
+        return $this->getCadastro($id);
+    }
+
+    public function editar(){
+        return $this->updateCadastro($this->getId(),$this->getEmail(),$this->getSenha(),$this->getEndereco(),$this->getBairro(),$this->getCep(),$this->getCidade(),$this->getEstado());
     }
 
 }

@@ -1,5 +1,6 @@
 <?php
-require_once("controller/ControllerCadastro.php");
+require_once("../sistema_login/controller/ControllerCadastro.php");
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -80,24 +81,24 @@ require_once("controller/ControllerCadastro.php");
                     <tbody>
                         <?php
                         $controller = new cadastroController();
-                        $result = $controller->listar();
+                        $result = $controller->listar(0);
                         //print_r($resultado);
                         for ($i = 0; $i < count($result); $i++) {
-                        ?>
-                            <tr>
-                                <td scope="col"><?php echo $result[$i]['id']; ?></td>
-                                <td scope="col"><?php echo $result[$i]['email']; ?></td>
-                                <td scope="col"><?php echo $result[$i]['senha']; ?></td>
-                                <td scope="col"><?php echo $result[$i]['endereco']; ?></td>
-                                <td scope="col"><?php echo $result[$i]['bairro']; ?></td>
-                                <td scope="col"><?php echo $result[$i]['cep']; ?></td>
-                                <td scope="col"><?php echo $result[$i]['cidade']; ?></td>
-                                <td scope="col"><?php echo $result[$i]['estado']; ?></td>
-                                <td scope="col">
-                                    <button type="button" class="btn btn-dark">Editar</button>
-                                    <button type="button" class="btn btn-dark">Excluir</button>
-                                </td>
-                            </tr>
+                            ?>
+                                <tr>
+                                    <td scope="col"><?php echo $result[$i]['id']; ?></td>
+                                    <td scope="col"><?php echo $result[$i]['email']; ?></td>
+                                    <td scope="col"><?php echo $result[$i]['senha']; ?></td>
+                                    <td scope="col"><?php echo $result[$i]['endereco']; ?></td>
+                                    <td scope="col"><?php echo $result[$i]['bairro']; ?></td>
+                                    <td scope="col"><?php echo $result[$i]['cep']; ?></td>
+                                    <td scope="col"><?php echo $result[$i]['cidade']; ?></td>
+                                    <td scope="col"><?php echo $result[$i]['estado']; ?></td>
+                                    <td scope="col">
+                                        <button type="button" class="btn btn-dark" onclick="location.href='editarClientes.php?id=<?php echo $result[$i]['id']; ?>'">Editar</button>
+                                        <button type="button" class="btn btn-dark">Excluir</button>
+                                    </td>
+                                </tr>
                         <?php
                         }
                         ?>

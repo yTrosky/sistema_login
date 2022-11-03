@@ -34,9 +34,13 @@ class Banco{
 
     }
 
-    public function getCadastro() {
+    public function getCadastro($id) {
         try {
-            $stmt = $this->mysqli->query("SELECT * FROM cadastro;");
+            if (isset($id) && $id >0) {
+                $stmt = $this->mysqli->query("SELECT * FROM cadastro WHERE id = '".$id."';");
+            }else {
+                $stmt = $this->mysqli->query("SELECT * FROM cadastro;");
+            }
             $lista = $stmt->fetch_all(MYSQLI_ASSOC);
             $f_lista = array();
             $i = 0;
@@ -56,5 +60,15 @@ class Banco{
             echo "Ocorreu um erro ao tentar Buscar Todos." . $e;
         }
     }
+
+    public function updateCadastro($id,$email,$senha,$endereco,$bairro,$cep,$cidade,$estado){
+        $stmt = $this->mysqli->query("UPDATE cadastro SET `email` = '".$email."', `senha` = '".$senha."', `endereco` = '".$endereco."', `bairro` = '".$bairro."', `cep` = '".$cep."', `cidade` = '".$cidade."', `estado` = '".$estado."' WHERE `id` = '".$id."';");
+        if ($stmt > 0) {
+            return true;
+        }else {
+            return false;
+        }
+    }
+
 }    
 ?>
